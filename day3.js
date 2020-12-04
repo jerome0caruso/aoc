@@ -17,7 +17,7 @@ let countingTrees = (right) => {
     for (i = 1; i < inputArray.length; i++) {
         
         if(inputArray[i].length > 0) {
-          console.log(inputArray[i])
+
         if (inputArray[i].charAt(char) === "#") {
             treeCount++;
         }
