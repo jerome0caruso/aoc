@@ -1,6 +1,17 @@
+//tickets
+
+let str =`
+BFBBBBBLLR
+BBFFBBFRRL
+FBFBFFFRRL
+etc...
+`
+// ----------Part1------------
+
 let strArr= str.split("\n");
 let reg = /[a-zA-Z]/;
 let largestSeatId = [];
+
 
 function giveLower(lowest, highest){
     highest = Math.floor((highest - lowest) / 2) + lowest;
@@ -59,6 +70,9 @@ onlyTicketsNum.map(ticket => {
 })
 
 console.log(`Highest seatId is ${Math.max(...largestSeatId)}`);
+
+
+///-------Part 2--------
 
 let findMySeat = largestSeatId.sort((a,b) => a-b).filter((seat, i, array) => array[i +1] - seat > 1);
 let missingSeat = 1;
